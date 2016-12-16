@@ -1,0 +1,24 @@
+{
+  "name": "advent2016",
+  "version": "1.0.0",
+  "description": "Advent of Code 2016, in Javascript and functional goodness",
+  "main": "index.js",
+  "dependencies": {
+    "collections": "^5.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daveonhols/advent2016.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daveonhols/advent2016/issues"
+  },
+  "homepage": "https://github.com/daveonhols/advent2016#readme"
+}

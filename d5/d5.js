@@ -1,6 +1,6 @@
 "use strict";
 
-var md5 = require('md5')
+var md5 = require('spark-md5').hash
 
 function partOne(){
     let password="";

@@ -103,11 +103,17 @@ function distance(loc) {
 }
 
 // part one asks for final location
-const partOne = JSON.stringify(distance(one(inputOne).last));
-console.log(`Part1= ${partOne}`);
+function partOne() {
+  return distance(one(inputOne).last);
+}
+
+function partTwo() {
+  return distance(one(inputOne).twice[0]);
+}
+
+exports.partOne = partOne;
+exports.partTwo = partTwo;
 
 // part two asks for first place visited twice.
-const partTwo = JSON.stringify(distance(one(inputOne).twice[0]));
-console.log(`Part2= ${partTwo}`);
 
 // $(".out").html(JSON.stringify());

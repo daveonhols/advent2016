@@ -8,7 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha ./d*/tests/*.js --reporter spec",
+    "lint": "./node_modules/.bin/eslint ./d[1]/*.js && exit 1"
   },
   "repository": {
     "type": "git",

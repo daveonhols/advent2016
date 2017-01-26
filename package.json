@@ -4,7 +4,8 @@
   "description": "Advent of Code 2016, in Javascript and functional goodness",
   "main": "index.js",
   "dependencies": {
-    "collections": "^5.0.6"
+    "collections": "^5.0.6",
+    "hashes": "^0.1.4"
   },
   "devDependencies": {},
   "scripts": {

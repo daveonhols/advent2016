@@ -5,7 +5,7 @@ const START = "10010000000110000";
 // take some data and apply provided algo to get more
 // works with char arrays not strings to make iteration easier
 function moreData(data) {
-  const next = data.map(char => char === "0" ? "1" : "0").reverse();
+  const next = data.map(char => (char === "0" ? "1" : "0")).reverse();
   return data.concat(["0"]).concat(next);
 }
 
@@ -13,7 +13,7 @@ function moreData(data) {
 // chops down to min length at the end
 function buildData(data, minLength) {
   let built = data;
-  while(built.length < minLength) {
+  while (built.length < minLength) {
     built = moreData(built);
   }
   console.log("slicing...");
@@ -35,7 +35,7 @@ function nextChecksum(data) {
 // until end condition (length of checksum is odd) is met
 function calculateChecksum(data) {
   let checksum = data;
-  while((checksum.length % 2) === 0) {
+  while ((checksum.length % 2) === 0) {
     checksum = nextChecksum(checksum);
   }
   return checksum;

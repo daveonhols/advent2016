@@ -155,13 +155,18 @@ function run() {
 
   // keep searching until we reach destination
   while (!reached(goal, destination)) {
+    // the goal is at the next path on the route
+    // strip that from the route and continue with search on next step on route
+    if (reached(goal, goalRoute[0])) {
+      goalRoute.shift();
+    }
+
     // 2. if next stop on route is open, move goal forwards
     // 3. else move space to next stop on route (use A* search)
     if (reached(space, goalRoute[0])) {
       steps += 1;
       space = goal;
       goal = goalRoute[0];
-      goalRoute.shift(); // move goal forwards one step and carry on
     } else {
       const spaceRoute = getAStarPath(space, goalRoute[0], goal);
       steps += spaceRoute.length - 1;
@@ -170,6 +175,5 @@ function run() {
   }
   return steps;
 }
-
 
 exports.run = run;

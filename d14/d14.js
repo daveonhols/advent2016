@@ -98,11 +98,6 @@ function search(stretching) {
   console.log(`Found from index: ${(((found[63]).exp) - 1000)}`);
 }
 
-console.log("Part 1");
-search(0);
-
-console.log("Part 2");
-search(2016);
-
 exports.findFives = findFives;
 exports.findTriple = findTriple;
+exports.search = search;
